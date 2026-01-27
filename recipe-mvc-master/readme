@@ -1,0 +1,55 @@
+# Recipe CRUD API Project
+
+This is a simple backend project to manage recipes using Node.js, Express.js, and MongoDB.  
+I followed the MVC pattern and tested all the API routes using Postman.
+
+## Technologies Used
+
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- Postman (for API testing)
+
+## Features
+
+1. Create a recipe  
+2. Get all recipes  
+3. Get a recipe by ID  
+4. Update a recipe by ID  
+5. Delete a recipe by ID  
+
+## Folder Structure
+
+- models → MongoDB schema file (recipeModels.js)  
+- controllers → Functions for each API (recipeController.js)  
+- routes → All API routes (recipeRoutes.js)  
+- config → MongoDB connection (db.js)  
+- app.js → Main server file  
+- .env → Mongo URI and port  
+
+## How to Run
+
+1. Install dependencies:  
+   `npm install`
+
+2. Create `.env` file: 
+    adding the URI and PORT number
+
+3. Start the server:  
+`npm start`
+
+---
+
+## API Endpoints
+
+POST => /api/recipes =>  Create new recipe    
+GET => /api/recipes =>  Get all recipes      
+GET => /api/recipes/:id => Get recipe by ID     
+PUT => /api/recipes/:id =>  Update recipe by ID  
+DELETE => /api/recipes/:id => Delete recipe by ID  
+
+## Postman
+
+I created and tested all APIs in Postman.  
+Imported the collection and included the JSON file in this folder.
+
