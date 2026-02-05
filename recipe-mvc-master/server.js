@@ -1,22 +1,18 @@
 const express = require("express");
-const connectDB = require("./config/db")
-const recipeRoutes = require("./router/recipeRouter")
+require("dotenv").config();
 
-const app = express(); //to create the express application
+const connectDB = require("./config/db");
+const recipeRoutes = require("./router/recipeRouter");
 
-require("dotenv").config(); 
-const PORT = process.env.PORT;
+const app = express();
 
-// connectDB
 connectDB();
 
-// middlware when post the data in the request body
-app.use(express.json())
+app.use(express.json());
+app.use("/api/recipes", recipeRoutes);
 
-app.use("/api/recipes",  recipeRoutes); //routes
+const PORT = process.env.PORT || 5004;
 
 app.listen(PORT, () => {
-    console.log("server is running at port 5004")
-})
-
-
+  console.log(`Server running on port ${PORT}`);
+});
